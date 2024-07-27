@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            text-align: center;
+            background-color: #1ecce3;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            padding: 0px;
+            margin: 10px;
+            align-items: center;
+            border: 2px black solid;
+            align-items: center;
+            
+        }
+
+        #css1{
+           height: 450px;
+        }
+
+        #space {
+            margin: 20px;
+            font-size: 30px;
+        }
+        h1{
+            font-size: 100px;
+        }
+        label{
+            font-size: 30px;
+        }
+        button{
+            background-color: #C0C0C0;
+        }
+        .colors{
+            background-color: wheat;
+        }
+        .shortid{
+            border: 4px red double;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+</head>
+
+<body>
+    <div id="css1">
+    <h1>URL SHORTENER</h1>
+    
+    <div>
+        <form method="post" action="/url">
+            <label id="space" class="colors">Enter Your Original URL:</label>
+            <input type="text" name="url" placeholder="Enter Your Original URL" id="space" class="colors"><br>
+            <button type="submit" id="space" class="btncolor">Generate</button>
+    </div>
+    <div>
+    <% if (locals.id) { %>
+        <label id="space">ID is Generated </label>
+        <div id="space" class="shortid">http://localhost:8001/<%= id %></div>
+    <% } %>
+</div>
+</div>
+</body>
+
+</html>
